@@ -1,0 +1,359 @@
+/* MASTER 20200608 */
+
+html,body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+main {
+ height: 45%;
+}
+section{
+    height: 10%;
+}
+footer {
+    height: 5%
+}
+.logo_footer {
+    height: 20%;
+}
+.textMainColor {
+  color: var(--mainColor);
+}
+.videoBG {
+  position: fixed;
+   top: 0;
+   left: 0;
+   min-width: 100%;
+   min-height: 100%;
+   z-index: -1;
+}
+/* Texts */
+.heroText {
+  font-family: "Comfortaa ", sans-serif;
+  color: var(--whiteColor);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+.h1 {
+  font-size: 3.3125rem;
+  line-height: 1.15em;
+}
+
+h2,
+.h2 {
+  font-size: 2.25rem;
+  line-height: 1.5em;
+}
+
+h3,
+.h3 {
+  font-size: 1.5625rem;
+  line-height: 1.4em;
+}
+
+h4,
+.h4 {
+  font-size: 1.125rem;
+  line-height: 1.5em;
+}
+
+h5,
+.h5 {
+  font-size: 1.0625rem;
+  line-height: 1.55em;
+  margin-bottom: 15px;
+}
+
+h6,
+.h6 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+b {
+  font-weight: 700;
+}
+
+small,
+.small {
+  font-size: 75%;
+  color: #777;
+}
+
+.title,
+.card-title,
+.info-title,
+.footer-brand,
+.footer-big h5,
+.footer-big h4,
+.media .media-heading {
+  font-weight: 700;
+  font-family: "Comfortaa", sans-serif;
+}
+.call {
+    text-align: center;
+    border: 2px solid var(--mainColor);
+    border-radius: 1rem;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.2em;
+    transition: 0.5s;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+}
+.call:hover {
+    background-color: var(--mainColor);
+    transition: 0.5s;
+    color: rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.w-30 {
+  width: 30%!important;
+}
+.bg-dark {
+  background-color: var(--secondColor)!important;
+}
+.bg-danger {
+  background-color: var(--mainColor)!important;
+}
+.bg-cadastro {
+    background-color: var(--lightgray);
+}
+/* Ad-spec */
+.spec-box {
+    background-color: var(--whiteColor);
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+}
+.spec-box , ul{
+    padding-top: 1rem;
+    list-style: none;
+}
+.modal-motorista {
+    max-width: 1000px;
+}
+.form-padding {
+    padding-top: 5vh;
+}
+.form-box {
+    padding: 15vh 5vw 0 5vw;
+    
+}
+.form-shadow{
+  box-shadow: 0rem 0rem 2rem 2rem rgba(0, 0, 0, 0.3);
+}
+.spacer {
+  height: 100px;
+}
+
+.form-control:focus {
+  color: var(--secondColor);
+  background-color: va(--whiteColor);
+  border-color: var(--mainColor);
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem rgba(255,0,88,0.25);
+}
+.form-header {
+    color: var(--whiteColor);
+    padding: 0.25rem 2rem 0.15rem 2rem;
+    border-radius: .1rem .1rem 0 0;
+    border-top: .05rem solid var(--mainColorDark);
+    border-left: .05rem solid var(--mainColorDark);
+    border-right: .05rem solid var(--mainColorDark);
+    background-color: var(--mainColor);
+  
+}
+.form-content {
+    padding: 2rem;
+    border-left: .05rem solid var(--mainColorDark);
+    border-right: .05rem solid var(--mainColorDark);
+    background-color: var(--white);
+}
+.form-footer {
+	padding: 1rem;
+	border-radius: 0 0 .1rem .1rem;
+  border-bottom: .05rem solid var(--mainColorDark);
+  border-left: .05rem solid var(--mainColorDark);
+  border-right: .05rem solid var(--mainColorDark);
+	background-color: var(--secondColor);
+}
+.form-link > a {
+  color: var(--mainColor);
+
+}
+.btn-send {
+    color: var(--whiteColor);
+    background-color: var(--mainColorDark);
+    border-color: var(--mainColor);
+    border-width: .05rem;
+    border-radius: .1rem;
+}
+.btn-send:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  border-color: rgba(0,0,0,0.2);
+  border-width: .05rem;
+}
+.btn-cancel {
+    color: var(--secondColor);
+    background-color: var(--gray);
+    border-color: var(--lightgray);
+    border-width: .05rem;
+    border-radius: .1rem;
+}
+.btn-cancel:hover {
+  color: var(--secondColor);
+  background-color: var(--lightgray);
+  border-color: rgba(0,0,0,0.2);
+  border-width: .05rem;
+}
+
+
+.navbar-dash_partner {
+  border-bottom: 1px solid var(--mainColor) ;
+}
+.footer-dash_partner {
+  border-top: 1px solid var(--mainColor) ;
+}
+
+.page-header {
+  overflow: hidden;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-filter{
+	position: relative;
+}
+.header-filter:before,
+.header-filter:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+}
+
+.header-filter::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+.header-filter .container {
+  z-index: 2;
+  position: relative;
+}
+
+.clear-filter::before {
+  background: none;
+}
+.purple-filter:after {
+  background: rgba(255, 0, 88, 0.5);
+  background: linear-gradient(45deg, rgba(255, 0, 88, 0.5) 0%, rgba(153, 0, 53, 0.45) 100%);
+  background: -moz-linear-gradient(135deg, rgba(255, 0, 88, 0.5) 0%, rgba(153, 0, 53, 0.45) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(255, 0, 88, 0.5) 0%, rgba(153, 0, 53, 0.45) 100%);
+}
+.brand {
+  color: #fff;
+  text-align: center;
+}
+.brand .h3 {
+	font-size: 1.313rem;
+	max-width: 500px;
+	margin: 10px auto 0;
+}
+
+.modal-header {
+	background-color: var(--mainColor);
+	color: var(--whiteColor);
+}
+
+.close {
+	color: var(--whiteColor);
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 650px;
+    margin: 5rem auto;
+}
+}
+
+.modal-footer {
+	background-color: var(--secondColor);
+}
+.main-raised-lp {
+  margin: -120px 30px 0px;
+  border-radius: 6px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}

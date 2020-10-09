@@ -1,0 +1,11 @@
+:root {
+  --noColor: transparent;
+  --mainColor: rgba(255,0,88,1);
+  --mainColorDark: rgba(153,0,53,1);
+  --secondColor: rgba(33,33,33,1);
+  --secondColorDrop50: rgba(33,33,33,0.5);
+  --whiteColor: rgba(255,255,255,1);
+
+  --lightgray: rgba(220,220,220,1);
+  --gray: rgba(150,150,150,1);
+  }

@@ -1,0 +1,61 @@
+/* Master */
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Comfortaa';
+    min-height: 100%;
+    color: var(--grayColor)!important;
+}
+.splashBackground {
+    background-image: linear-gradient(var(--darkColor),var(--warmerColor),var(--mainColor));
+    background-size: cover;
+}
+.sectionBackground {
+    background-color: var(--whiteColor);
+    border-radius: 0.25rem;
+    border: 0.1rem solid var(--darkColor);
+}
+/* Título */
+.card-header {
+    background-color: var(--grayColor);
+    margin:-.45rem -.93rem 1rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    color: var(--whiteColor);
+    border-bottom: .11rem solid var(--mainColor);
+}
+.card-header h1 {
+    color: var(--whiteColor);
+    font-size: 1.75rem;
+}
+.card-header h2 {
+    color: var(--grayColorLight);
+    font-size: 1.25rem;
+}
+/* Navigation */
+.bg-dark {
+    background-color: var(--grayColor)!important;
+}
+.navbar{
+    border-bottom: 0.1rem solid var(--mainColor);
+}
+.navbar-brand > img {
+    height: 2rem;
+}
+.navbar-dark .navbar-toggler {
+    color: var(--mainColor);
+    border-color: var(--darkColor);
+}
+.navbar-toggler {
+    border-radius: .5rem;
+}
+
+/* Table */
+.table {
+    margin-bottom: 0rem!important;
+}
+.thead-color{
+    background-color: var(--grayColor);
+    color: var(--whiteColor);
+    border-color: var(--darkColorDrop50);
+}

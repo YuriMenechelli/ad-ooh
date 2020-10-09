@@ -1,0 +1,30 @@
+:root {
+    --noColor: transparent;
+    --whiteColor: rgba(255,255,255,1);
+    --blackColor: rgba(0,0,0,1);
+
+    --mainColor: rgba(255,0,88,1);
+    --mainColorDrop75: rgba(255,0,88,0.75);
+    --mainColorDrop50: rgba(255,0,88,0.5);
+    --mainColorDrop25: rgba(255,0,88,0.25);
+
+    --warmerColor: rgba(255,0,44,1);
+    --warmerColorDrop75: rgba(255,0,44,0.75);
+    --warmerColorDrop50: rgba(255,0,44,0.5);
+    --warmerColorDrop25: rgba(255,0,44,0.25);
+
+    --darkColor: rgba(153,0,53,1);
+    --darkColorDrop75: rgba(153,0,53,0.75);
+    --darkColorDrop50: rgba(153,0,53,0.5);
+    --darkColorDrop25: rgba(153,0,53,0.25);
+    
+    --grayColor: rgba(33,33,33,1);
+    
+    --grayColorLight: rgba(200,200,200,1);
+    --grayColorLightDrop75: rgba(200,200,200,0.75);
+    --grayColorLightDrop50: rgba(200,200,200,0.5);
+    --grayColorLightDrop25: rgba(200,200,200,0.25);
+  
+    --lightgray: rgba(220,220,220,1);
+    --gray: rgba(200,200,200,1);
+    }
