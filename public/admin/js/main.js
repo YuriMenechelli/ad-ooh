@@ -96,9 +96,9 @@ $(document).ready( function () {
 			dataType: "json",
 			success: function (resposta) {
 				if (resposta.erro == 0) {
-					location.reload();
+					location.reload(alert(resposta.msg));
 				} else {
-					alert('Erro ao mudar status.');
+					alert(resposta.msg);
 				}
 			},
 			error: function () {
