@@ -10,7 +10,7 @@ class Checks_admin extends CI_Controller {
 	}
 
 
-	public function getCampaignsAiring($id=NULL){
+	public function getCampaigns($id=NULL){
 
 		if (!$id){
 			$return['erro'] = 58;
@@ -19,7 +19,7 @@ class Checks_admin extends CI_Controller {
 			exit;
 		}
 
-		$query = $this->checks_admin_model->getAiringIDChecks($id);
+		$query = $this->checks_admin_model->getCampaingIDChecks($id);
 		if (!$query){
 
 			$return['erro'] = 59;
@@ -28,17 +28,19 @@ class Checks_admin extends CI_Controller {
 			exit;
 		}
 
-		/*switch ($query->active){
-			case 0 :
-				$active = '<span class="label label-danger">Inativo</span>';
-				break;
-			case 1 :
-				$active = '<span class="label label-success">Ativo</span>';
-				break;
+		/*$foto_check	= $this->input->post('photos_checks');
+		$t_photo 		= count($foto_check);
+		for ($i=0; $i < $t_photo; $i++){
+
+			$foto['id_airing_hours'] = $id;
+			$foto['foto']   	= $foto_check[$i];
+			$foto['principal']  = ($i == 0 ? 1 : 0);
+			$this->checks_admin_model->doInsertFotoCheck($foto);
 		}*/
 
+
 		$return['erro'] = 0;
-		$return['id_airing_hours'] 	= $query->id_airing_hours;
+		$return['id_campaign'] 	= $query->id_campaign;
 		echo json_encode($return);
 		exit;
 	}

@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<!-- ICO-->
 	<link rel="shortcut icon" type="image/x-icon" href="https://ad-ooh.com/ad-ooh_logo_pin_20200522.ico">
+	<!-- Master -->
+	<link rel="stylesheet" href="<?= base_url('public/admin/css/master.css') ?>">
 	<!-- Material Design Bootstrap -->
 	<link rel="stylesheet" href="<?= base_url('public/admin/dist/bootstrap/css/bootstrap.min.css') ?>">
 	<!-- Font Awesome -->

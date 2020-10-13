@@ -2,11 +2,16 @@ $(document).ready( function () {
 
 	$(document).on('click','.btn-checks', function () {
 
-		var id 	= $(this).attr('data-id-campaign');
+		var id 			= $(this).attr('data-id-campaign');
+		var data 		= new Date();
+		var dia     	= data.getDate();           // 1-31
+		var mes     	= data.getMonth();          // 0-11 (zero=janeiro)
+		var ano     	= data.getFullYear();		// ano com 4 digitos.
+		var str_data 	= dia + '/' + (mes+1) + '/' + ano;
 
 		$.ajax({
 			type: "GET",
-			url: "http://localhost/ad-ooh/admin/checks_admin/getCampaignsAiring/" + id + "",
+			url: "http://localhost/ad-ooh/admin/checks_admin/getCampaigns/" + id + "",
 			dataType: "json",
 			success: function (resposta) {
 				if (resposta.erro === 0) {
@@ -16,18 +21,18 @@ $(document).ready( function () {
 								'<div class="modal-content">' +
 									'<div class="modal-header">' +
 										'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-										'<h6 class="modal-title" id="myModalLabel"><span class="label label-info">Check dia</span></h6>' +
+										'<h2 class="modal-title text-center" id="myModalLabel"><span class="label label-info">Check dia '+str_data+'</span></h2>' +
 									'</div>' +
-									'<div class="modal-body"><p style="text-align: center"><strong> Check</strong></p>' +
+									'<div class="modal-body"><p style="text-align: center"><strong> Verifique se a campanha esta correta.</strong></p>' +
 										'<form action="" method="post" accept-charset="utf-8" class="form-horizontal">' +
 										'<hr />' +
 											'<div id="fileuploader">Upload Foto</div>'+
 											'<div class="form-group">'+
-												'<div class="col-sm-10 return_photos" >'+
-													'<div class="col-sm-3 img_photo_prod_view">'+
-														'<img src="">'+
-														'<input type="hidden" value="" name="photos_products[]">'+
-														'<a href="#" class="btn btn-danger btn-apagar-photo-produto"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a>'+
+												'<div class="col-sm-10 return_checks" >'+
+													'<div class="col-sm-3 img_photo_check">'+
+														'<img src="" alt="">'+
+														'<input type="hidden" value="" name="photos_checks[]">'+
+														'<a href="#" class="btn btn-danger btn-apagar-checks"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a>'+
 													'</div>'+
 												'</div>'+
 											'</div>'+
@@ -35,11 +40,30 @@ $(document).ready( function () {
 									'</div>'+
 									'<div class="modal-footer">' +
 										'<button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>' +
-										'<button type="button" class="btn btn-primary btn-atualizar-status-cliente" data-id-cliente="' + id + '">Atualizar</button>' +
+										'<button type="submit" class="btn btn-primary" data-id-campaign="' + id + '">Salvar</button>' +
 									'</div>' +
 								'</div>' +
 							'</div>' +
 						'</div>');
+					$("#fileuploader").uploadFile({
+						url:"http://localhost/ad-ooh/admin/checks_admin/uploadMcDonalds/",
+						fileName:"foto_check",
+						returnType: 'json',
+						onSuccess: function (file, data) {
+							$('.ajax-file-upload-statusbar').hide();
+
+							if (data.erro === 0){
+								$('.return_checks').append('<div class="col-sm-3 img_photo_check"><img src="http://localhost/ad-ooh/uploads/mcdonalds/'+ data.file_name +'" alt=""><input type="hidden" value="'+ data.file_name +'" name="photos_checks[]"><a href="#" class="btn btn-danger btn-apagar-checks"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a></div>');
+							}else{
+								alert(data.msg);
+							}
+						},
+						onError: function (file, status, errMsg) {
+
+							alert(file +'<br>'+ errMsg);
+
+						}
+					}),
 					$('#modal_checks'+id).modal('show');
 
 					$('#modal_checks'+id).on('hidden.bs.modal', function (e) {
@@ -57,29 +81,7 @@ $(document).ready( function () {
 		})
 	});
 
-
-
-	$("#fileuploader").uploadFile({
-		url:"http://localhost/ad-ooh/admin/checks_admin/uploadMcDonalds/",
-		fileName:"foto_check",
-		returnType: 'json',
-		onSuccess: function (file, data) {
-			$('.ajax-file-upload-statusbar').hide();
-
-			if (data.erro === 0){
-				$('.return_photos').append('<div class="col-sm-3 img_photo_prod_view"><img src="http://localhost/ad-ooh/uploads/mcdonalds/'+ data.file_name +'" alt=""><input type="hidden" value="'+ data.file_name +'" name="photos_products[]"><a href="#" class="btn btn-danger btn-apagar-photo-produto"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a></div>');
-			}else{
-				alert(data.msg);
-			}
-		},
-		onError: function (file, status, errMsg) {
-
-			alert(file +'<br>'+ errMsg);
-
-		}
-	});
-
-	/*$(document).on('click','.btn-apagar-photo-produto', function () {
+	$(document).on('click','.btn-apagar-checks', function () {
 
 		if (confirm("Deseja pagar esta foto?")){
 
@@ -89,7 +91,7 @@ $(document).ready( function () {
 			return false;
 		}
 
-	});*/
+	});
 
 	$(document).on('click','.btn-alterar-status-cliente', function () {
 

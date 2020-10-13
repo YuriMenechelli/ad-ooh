@@ -166,12 +166,13 @@
 							<thead>
 							<tr>
 								<th>ID</th>
-								<th class="text-center">Cliente</th>
-								<th class="text-center">Tipo</th>
-								<th class="text-center">Modelo</th>
-								<th class="text-center">Área</th>
-								<th class="text-center">Data Ínicio</th>
-								<th class="text-center">Data Final</th>
+								<th class="text-center">CLIENTE</th>
+								<th class="text-center">TIPO</th>
+								<th class="text-center">MODELO</th>
+								<th class="text-center">ÁREA</th>
+								<th class="text-center">DATA ÍNICIAL</th>
+								<th class="text-center">DATA FINAL</th>
+								<th class="text-right">CHECKS</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -187,6 +188,9 @@
 									<td><?= $cp->nome?></td>
 									<td class="text-center"><?= formatDateView($cp->dt_begin)?></td>
 									<td class="text-center"><?= formatDateView($cp->dt_end)?></td>
+									<td class="text-right">
+										<button title="Checks" class="btn btn-success btn-checks" data-toggle="modal" data-id-campaign="<?= $cp->id_campaign?>"><i class="fa fa-check"></i> Realizar Check</button>
+									</td>
 								</tr>
 							<?php endforeach;?>
 							</tbody>
@@ -249,7 +253,6 @@
 									<th class="text-center">DATAS</th>
 									<th class="text-center">VALORES</th>
 									<th class="text-center">CAMPANHA</th>
-									<th class="text-right">CHECKS</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -259,9 +262,6 @@
 									<td class="text-center"><?= $air->Data?></td>
 									<td class="text-center"><?= $air->Valores?></td>
 									<td class="text-center"><?= $air->Clientes?></td>
-									<td class="text-right">
-										<button title="Checks" class="btn btn-instagram btn-checks" data-toggle="modal" data-id-campaign="<?= $air->id?>"><i class="fa fa-check"></i> Realizar Check</button>
-									</td>
 								</tr>
 							<?php endforeach;?>
 							</tbody>
