@@ -6,7 +6,7 @@ $(document).ready( function () {
 
 		$.ajax({
 			type: "GET",
-			url: "http://localhost/ad-ooh/admin/checks_admin/getCampaigns/" + id + "",
+			url: "http://localhost/ad-ooh/admin/checks_admin/getCampaignsAiring/" + id + "",
 			dataType: "json",
 			success: function (resposta) {
 				if (resposta.erro === 0) {
@@ -18,16 +18,20 @@ $(document).ready( function () {
 										'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
 										'<h6 class="modal-title" id="myModalLabel"><span class="label label-info">Check dia</span></h6>' +
 									'</div>' +
-									'<div class="modal-body" id="fileuploader"><p style="text-align: center"><strong> Check</strong></p>' +
-										'<div class="form-group">'+
-											'<div class="col-sm-10 return_photos" >'+
-												'<div class="col-sm-3 img_photo_prod_view">'+
-													'<img src="">'+
-													'<input type="hidden" value="" name="photos_products[]">'+
-													'<a href="#" class="btn btn-danger btn-apagar-photo-produto"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a>'+
+									'<div class="modal-body"><p style="text-align: center"><strong> Check</strong></p>' +
+										'<form action="" method="post" accept-charset="utf-8" class="form-horizontal">' +
+										'<hr />' +
+											'<div id="fileuploader">Upload Foto</div>'+
+											'<div class="form-group">'+
+												'<div class="col-sm-10 return_photos" >'+
+													'<div class="col-sm-3 img_photo_prod_view">'+
+														'<img src="">'+
+														'<input type="hidden" value="" name="photos_products[]">'+
+														'<a href="#" class="btn btn-danger btn-apagar-photo-produto"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a>'+
+													'</div>'+
 												'</div>'+
 											'</div>'+
-										'</div>'+
+										'</form>' +
 									'</div>'+
 									'<div class="modal-footer">' +
 										'<button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>' +

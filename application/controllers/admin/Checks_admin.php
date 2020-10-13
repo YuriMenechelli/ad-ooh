@@ -10,7 +10,7 @@ class Checks_admin extends CI_Controller {
 	}
 
 
-	public function getCampaigns($id=NULL){
+	public function getCampaignsAiring($id=NULL){
 
 		if (!$id){
 			$return['erro'] = 58;
@@ -23,7 +23,7 @@ class Checks_admin extends CI_Controller {
 		if (!$query){
 
 			$return['erro'] = 59;
-			$return['msg'] = 'Erro, nenhuma campanha encontrada com a ID informada.';
+			$return['msg'] = 'Erro, nenhuma campanha encontrada com o ID informado.';
 			echo json_encode($return);
 			exit;
 		}

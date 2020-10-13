@@ -18,8 +18,8 @@
 	<link rel="stylesheet" href="<?= base_url('public/admin/css/skin-blue.min.css') ?>">
 	<!-- plugin Data-Table -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url('public/admin/dist/data-tables/datatables.css') ?>">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- plugin Uploads -->
+	<link rel="stylesheet" type="text/css" href="<?= base_url('public/admin/dist/jquery-uploadfile/css/uploadfile.css') ?>">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet" type="text/css">
@@ -145,5 +145,7 @@
 	<script src="<?= base_url('public/admin/js/main.js') ?>"></script>
 	<!--JQuery Mask-->
 	<script src="<?= base_url('public/admin/dist/jquery-mask/js/jquery.mask.min.js') ?>"></script>
+	<!--JQuery UploadFile-->
+	<script src="<?= base_url('public/admin/dist/jquery-uploadfile/js/jquery.uploadfile.min.js') ?>"></script>
 </body>
 </html>
