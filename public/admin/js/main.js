@@ -21,21 +21,12 @@ $(document).ready( function () {
 								'<div class="modal-content">' +
 									'<div class="modal-header">' +
 										'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-										'<h2 class="modal-title text-center" id="myModalLabel"><span class="label label-info">Check dia '+str_data+'</span></h2>' +
+										'<h2 class="modal-title text-center" id="myModalLabel"><span class="label label-info">Check do dia '+str_data+'</span></h2>' +
 									'</div>' +
 									'<div class="modal-body"><p style="text-align: center"><strong> Verifique se a campanha esta correta.</strong></p>' +
 										'<form action="" method="post" accept-charset="utf-8" class="form-horizontal">' +
 										'<hr />' +
 											'<div id="fileuploader">Upload Foto</div>'+
-											'<div class="form-group">'+
-												'<div class="col-sm-10 return_checks" >'+
-													'<div class="col-sm-3 img_photo_check">'+
-														'<img src="" alt="">'+
-														'<input type="hidden" value="" name="photos_checks[]">'+
-														'<a href="#" class="btn btn-danger btn-apagar-checks"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a>'+
-													'</div>'+
-												'</div>'+
-											'</div>'+
 										'</form>' +
 									'</div>'+
 									'<div class="modal-footer">' +

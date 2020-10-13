@@ -38,6 +38,13 @@ class Reports_admin_model extends CI_Model{
 		}
 	}
 
+	public function getPhotosChecks($id_check=NULL){
+		if ($id_check) {
+			$this->db->where('campaign_id', $id_check);
+			return $this->db->get('photos_checks')->result();
+		}
+	}
+
 	public function getCampaignCostumers(){
 		$query = $this->db->get('costumers');
 		return $query->result();

@@ -33,15 +33,21 @@ class Reports_admin extends CI_Controller{
 	//Módulo das campanhas
 	public function campaigns_module($id_campaign=NULL){
 
-		$dados = NULL;
+		$dados 	= NULL;
+		$photos = NULL;
 
 		if ($id_campaign){
-			$dados = $this->reports_admin_model->getCampaignsID($id_campaign);
-			if ( !$dados ) {
+			$data['title'] = 'Atualizar as Campanhas';
+
+			$query = $this->reports_admin_model->getCampaignsID($id_campaign);
+			if ( $query ) {
+				$dados = $query;
+				$photos = $this->reports_admin_model->getPhotosChecks($query->id_photos_checks);
+			}else {
 				setMsg('msgCadastro','Campanha não encontrada!','erro');
 				redirect('admin/reports_admin/campaigns','refresh');
 			}
-			$data['title'] = 'Atualizar as Campanhas';
+
 		}else{
 			$data['title'] = 'Adicionar Campanhas';
 		}
@@ -51,6 +57,7 @@ class Reports_admin extends CI_Controller{
 		$data['nav']		= array('titulo' => 'Lista de campanhas', 'link' => 'admin/reports_admin/campaigns');
 		$data['costumer']	= $this->reports_admin_model->getCampaignCostumers();
 		$data['cidades']	= $this->reports_admin_model->getCampaignCidades();
+		$data['fotos'] 		= $photos;
 
 
 		$this->load->view('admin/template/index', $data);
