@@ -51,7 +51,8 @@ class Home_admin_model extends CI_Model{
 	}
 
 	public function getAiringHoursHome(){
-		$this->db->select('ah.dt_cp as Data, 
+		$this->db->select('ah.id_airing_hours as id,
+						   ah.dt_cp as Data, 
 						   ah.airing_hour_value as Valores,
 						   co.costumer_name as Clientes, 
 						   cp.model as Modelo');

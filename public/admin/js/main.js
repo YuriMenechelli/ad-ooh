@@ -1,14 +1,69 @@
 $(document).ready( function () {
 
-	/*$("#fileuploader").uploadFile({
-		url:"http://localhost/loja_virtual/admin/produtos/upload/",
-		fileName:"foto_produto",
+	$(document).on('click','.btn-checks', function () {
+
+		var id 	= $(this).attr('data-id-campaign');
+
+		$.ajax({
+			type: "GET",
+			url: "http://localhost/ad-ooh/admin/checks_admin/getCampaigns/" + id + "",
+			dataType: "json",
+			success: function (resposta) {
+				if (resposta.erro === 0) {
+					$('.modal_dinamico_checks').append(
+						'<div class="modal fade" data-backdrop="static" id="modal_checks' + id + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
+							'<div class="modal-dialog" role="document">' +
+								'<div class="modal-content">' +
+									'<div class="modal-header">' +
+										'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+										'<h6 class="modal-title" id="myModalLabel"><span class="label label-info">Check dia</span></h6>' +
+									'</div>' +
+									'<div class="modal-body" id="fileuploader"><p style="text-align: center"><strong> Check</strong></p>' +
+										'<div class="form-group">'+
+											'<div class="col-sm-10 return_photos" >'+
+												'<div class="col-sm-3 img_photo_prod_view">'+
+													'<img src="">'+
+													'<input type="hidden" value="" name="photos_products[]">'+
+													'<a href="#" class="btn btn-danger btn-apagar-photo-produto"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a>'+
+												'</div>'+
+											'</div>'+
+										'</div>'+
+									'</div>'+
+									'<div class="modal-footer">' +
+										'<button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>' +
+										'<button type="button" class="btn btn-primary btn-atualizar-status-cliente" data-id-cliente="' + id + '">Atualizar</button>' +
+									'</div>' +
+								'</div>' +
+							'</div>' +
+						'</div>');
+					$('#modal_checks'+id).modal('show');
+
+					$('#modal_checks'+id).on('hidden.bs.modal', function (e) {
+						$(this).remove();
+					})
+				}else {
+					alert(resposta.msg);
+				}
+			},
+
+			error: function () {
+				alert('Erro ao realizar check!');
+			}
+
+		})
+	});
+
+
+
+	$("#fileuploader").uploadFile({
+		url:"http://localhost/ad-ooh/admin/checks_admin/uploadMcDonalds/",
+		fileName:"foto_check",
 		returnType: 'json',
 		onSuccess: function (file, data) {
 			$('.ajax-file-upload-statusbar').hide();
 
 			if (data.erro === 0){
-				$('.return_photos').append('<div class="col-sm-3 img_photo_prod_view"><img src="http://localhost/loja_virtual/uploads/fotos_produtos/'+ data.file_name +'" alt=""><input type="hidden" value="'+ data.file_name +'" name="photos_products[]"><a href="#" class="btn btn-danger btn-apagar-photo-produto"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a></div>');
+				$('.return_photos').append('<div class="col-sm-3 img_photo_prod_view"><img src="http://localhost/ad-ooh/uploads/mcdonalds/'+ data.file_name +'" alt=""><input type="hidden" value="'+ data.file_name +'" name="photos_products[]"><a href="#" class="btn btn-danger btn-apagar-photo-produto"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a></div>');
 			}else{
 				alert(data.msg);
 			}
@@ -18,7 +73,7 @@ $(document).ready( function () {
 			alert(file +'<br>'+ errMsg);
 
 		}
-	});*/
+	});
 
 	/*$(document).on('click','.btn-apagar-photo-produto', function () {
 

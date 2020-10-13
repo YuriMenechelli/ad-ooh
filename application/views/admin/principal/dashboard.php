@@ -246,21 +246,22 @@
 							<thead>
 								<tr>
 									<th></th>
-									<th class="text-center">Datas</th>
-									<th class="text-center">Valores</th>
-									<th class="text-center">Campanha</th>
+									<th class="text-center">DATAS</th>
+									<th class="text-center">VALORES</th>
+									<th class="text-center">CAMPANHA</th>
+									<th class="text-right">CHECKS</th>
 								</tr>
 							</thead>
 							<tbody>
-							<?php $order=0;
-							foreach ($airing as $air):
-								$order++;
-								?>
+							<?php foreach ($airing as $air): ?>
 								<tr>
-									<td><?= $order?></td>
+									<td><?= $air->id?></td>
 									<td class="text-center"><?= $air->Data?></td>
 									<td class="text-center"><?= $air->Valores?></td>
 									<td class="text-center"><?= $air->Clientes?></td>
+									<td class="text-right">
+										<button title="Checks" class="btn btn-instagram btn-checks" data-toggle="modal" data-id-campaign="<?= $air->id?>"><i class="fa fa-check"></i> Realizar Check</button>
+									</td>
 								</tr>
 							<?php endforeach;?>
 							</tbody>
@@ -274,3 +275,5 @@
 		</div>
 	</section>
 	<div class="modal_dinamico"></div><!-- /.modal -->
+
+	<div class="modal_dinamico_checks"></div><!-- /.modal -->
