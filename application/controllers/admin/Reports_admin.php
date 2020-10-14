@@ -42,7 +42,7 @@ class Reports_admin extends CI_Controller{
 			$query = $this->reports_admin_model->getCampaignsID($id_campaign);
 			if ( $query ) {
 				$dados = $query;
-				$photos = $this->reports_admin_model->getPhotosChecks($query->id_photos_checks);
+				$photos = $this->reports_admin_model->getPhotosChecks($query->id_campaign);
 			}else {
 				setMsg('msgCadastro','Campanha não encontrada!','erro');
 				redirect('admin/reports_admin/campaigns','refresh');
@@ -92,6 +92,15 @@ class Reports_admin extends CI_Controller{
 				$this->reports_admin_model->doInsertCampaign($data);
 				setMsg('msgCadastro', 'Campanha adicionada com sucesso!', 'sucesso');
 				redirect('admin/reports_admin/campaigns','refresh');
+			}
+
+			$foto_check		= $this->input->post('photos_checks');
+			$t_photo 		= count($foto_check);
+			for ($i=0; $i < $t_photo; $i++){
+				$foto['id_photos_checks'] 	= $id;
+				$foto['photos_check']   	= $foto_check[$i];
+				$foto['main']  				= ($i == 0 ? 1 : 0);
+				$this->reports_admin_model->doInsertPhotoChecks($foto);
 			}
 
 		}else{

@@ -9,11 +9,4 @@ class Checks_admin_model extends CI_Model{
 		return $this->db->get('campaign')->row();
 	}
 
-	public function doInsertFotoCheck($dados=NULL){
-
-		if (is_array($dados)){
-			$this->db->insert('produtos_fotos', $dados);
-		}
-	}
-
 }

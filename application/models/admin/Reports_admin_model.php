@@ -45,6 +45,13 @@ class Reports_admin_model extends CI_Model{
 		}
 	}
 
+	public function doInsertPhotoChecks($dados=NULL){
+
+		if (is_array($dados)){
+			$this->db->insert('photos_checks', $dados);
+		}
+	}
+
 	public function getCampaignCostumers(){
 		$query = $this->db->get('costumers');
 		return $query->result();

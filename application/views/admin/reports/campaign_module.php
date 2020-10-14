@@ -78,7 +78,7 @@
 							<?php if ($fotos){ ?>
 								<?php foreach ($fotos as $pic){ ?>
 									<div class="col-sm-3 img_photo_check">
-										<img src="<?= base_url('uploads/fotos_produtos/'.$pic->photos_check) ?>" alt="">
+										<img src="<?= base_url('uploads/'.$pic->photos_check) ?>" alt="">
 										<input type="hidden" value="<?= $pic->photos_check ?>" name="photos_checks[]">
 										<a href="#" class="btn btn-danger btn-apagar-checks"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a>
 									</div>

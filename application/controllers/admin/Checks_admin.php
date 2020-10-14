@@ -28,17 +28,6 @@ class Checks_admin extends CI_Controller {
 			exit;
 		}
 
-		/*$foto_check	= $this->input->post('photos_checks');
-		$t_photo 		= count($foto_check);
-		for ($i=0; $i < $t_photo; $i++){
-
-			$foto['id_airing_hours'] = $id;
-			$foto['foto']   	= $foto_check[$i];
-			$foto['principal']  = ($i == 0 ? 1 : 0);
-			$this->checks_admin_model->doInsertFotoCheck($foto);
-		}*/
-
-
 		$return['erro'] = 0;
 		$return['id_campaign'] 	= $query->id_campaign;
 		echo json_encode($return);
@@ -48,9 +37,9 @@ class Checks_admin extends CI_Controller {
 
 
 
-	public function uploadMcDonalds(){
+	public function uploads(){
 
-		$pasta = 'C:/wamp64/www/ad-ooh/uploads/mcdonalds/';
+		$pasta = 'C:/wamp64/www/ad-ooh/uploads/';
 
 		$config['upload_path'] 	= $pasta;
 		$config['allowed_types'] ='jpg|jpeg|bmp|png|gif';

@@ -23,28 +23,27 @@ $(document).ready( function () {
 										'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
 										'<h2 class="modal-title text-center" id="myModalLabel"><span class="label label-info">Check do dia '+str_data+'</span></h2>' +
 									'</div>' +
-									'<div class="modal-body"><p style="text-align: center"><strong> Verifique se a campanha esta correta.</strong></p>' +
+									'<div class="modal-body"><p style="text-align: center"><strong> Campanha [# '+ id +']</strong></p>' +
 										'<form action="" method="post" accept-charset="utf-8" class="form-horizontal">' +
-										'<hr />' +
 											'<div id="fileuploader">Upload Foto</div>'+
 										'</form>' +
 									'</div>'+
 									'<div class="modal-footer">' +
 										'<button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>' +
-										'<button type="submit" class="btn btn-primary" data-id-campaign="' + id + '">Salvar</button>' +
+										'<button type="button" class="btn btn-primary fileuploader" data-id-campaign="' + id + '">Salvar</button>' +
 									'</div>' +
 								'</div>' +
 							'</div>' +
 						'</div>');
 					$("#fileuploader").uploadFile({
-						url:"http://localhost/ad-ooh/admin/checks_admin/uploadMcDonalds/",
+						url:"http://localhost/ad-ooh/admin/checks_admin/uploads/",
 						fileName:"foto_check",
 						returnType: 'json',
 						onSuccess: function (file, data) {
 							$('.ajax-file-upload-statusbar').hide();
 
 							if (data.erro === 0){
-								$('.return_checks').append('<div class="col-sm-3 img_photo_check"><img src="http://localhost/ad-ooh/uploads/mcdonalds/'+ data.file_name +'" alt=""><input type="hidden" value="'+ data.file_name +'" name="photos_checks[]"><a href="#" class="btn btn-danger btn-apagar-checks"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a></div>');
+								$('.return_checks').append('<div class="col-sm-3 img_photo_check"><img src="http://localhost/ad-ooh/uploads/'+ data.file_name +'" alt=""><input type="hidden" value="'+ data.file_name +'" name="photos_checks[]"><a href="#" class="btn btn-danger btn-apagar-checks"><i class="glyphicon glyphicon-trash"></i> Apagar Foto</a></div>');
 							}else{
 								alert(data.msg);
 							}
