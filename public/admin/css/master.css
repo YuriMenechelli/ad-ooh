@@ -8,11 +8,15 @@
 }
 
 .img_photo_check img{
-	height: 180px;
-	border-radius: 5px;
+	height: 130px;
 }
 
 .img_photo_check a{
 	display: block;
 	margin-top: 15px;
+}
+
+
+.uploader{
+	padding-left: 50px;
 }

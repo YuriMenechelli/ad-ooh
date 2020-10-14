@@ -25,12 +25,12 @@ $(document).ready( function () {
 									'</div>' +
 									'<div class="modal-body"><p style="text-align: center"><strong> Campanha [# '+ id +']</strong></p>' +
 										'<form action="" method="post" accept-charset="utf-8" class="form-horizontal">' +
-											'<div id="fileuploader">Upload Foto</div>'+
+											'<div class="uploader" id="fileuploader">Upload Foto</div>'+
 										'</form>' +
 									'</div>'+
 									'<div class="modal-footer">' +
 										'<button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>' +
-										'<button type="button" class="btn btn-primary fileuploader" data-id-campaign="' + id + '">Salvar</button>' +
+										'<button type="button" class="btn btn-primary" data-id-campaign="' + id + '">Salvar</button>' +
 									'</div>' +
 								'</div>' +
 							'</div>' +

@@ -57,7 +57,7 @@ class Reports_admin extends CI_Controller{
 		$data['nav']		= array('titulo' => 'Lista de campanhas', 'link' => 'admin/reports_admin/campaigns');
 		$data['costumer']	= $this->reports_admin_model->getCampaignCostumers();
 		$data['cidades']	= $this->reports_admin_model->getCampaignCidades();
-		$data['fotos'] 		= $photos;
+		$data['photos'] 		= $photos;
 
 
 		$this->load->view('admin/template/index', $data);
@@ -90,6 +90,8 @@ class Reports_admin extends CI_Controller{
 
 				$data['dt_inc']		= dataNow();
 				$this->reports_admin_model->doInsertCampaign($data);
+
+				$id_campaign = $this->session->userdata('last_id');
 				setMsg('msgCadastro', 'Campanha adicionada com sucesso!', 'sucesso');
 				redirect('admin/reports_admin/campaigns','refresh');
 			}
@@ -97,7 +99,7 @@ class Reports_admin extends CI_Controller{
 			$foto_check		= $this->input->post('photos_checks');
 			$t_photo 		= count($foto_check);
 			for ($i=0; $i < $t_photo; $i++){
-				$foto['id_photos_checks'] 	= $id;
+				$foto['id_photos_checks'] 	= $id_campaign;
 				$foto['photos_check']   	= $foto_check[$i];
 				$foto['main']  				= ($i == 0 ? 1 : 0);
 				$this->reports_admin_model->doInsertPhotoChecks($foto);

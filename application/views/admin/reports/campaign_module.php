@@ -72,11 +72,10 @@
 						<label for="dt_fim">Data Final:</label>
 						<input type="date" name="dt_end" class="form-control" value="<?= ( $dados != NULL ? $dados->dt_end : set_value('dt_end'))?>"><br>
 					</div>
-
 					<div class="form-group">
-						<div class="col-sm-10 return_checks" >
-							<?php if ($fotos){ ?>
-								<?php foreach ($fotos as $pic){ ?>
+						<div class="col-sm-10" >
+							<?php if ($photos){ ?>
+								<?php foreach ($photos as $pic){ ?>
 									<div class="col-sm-3 img_photo_check">
 										<img src="<?= base_url('uploads/'.$pic->photos_check) ?>" alt="">
 										<input type="hidden" value="<?= $pic->photos_check ?>" name="photos_checks[]">

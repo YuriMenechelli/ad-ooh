@@ -133,12 +133,9 @@
 							</tr>
 							</thead>
 							<tbody>
-							<?php $order=0;
-							foreach ($costumers as $co):
-								$order++;
-								?>
+							<?php foreach ($costumers as $co): ?>
 								<tr>
-									<td><?= $order?></td>
+									<td><?= $co->id_costumers?></td>
 									<td class="text-center"><?= $co->costumer_name?></td>
 									<td class="text-center"><?= ($co->active == 1 ? '<span class="label label-success">Ativo</span>':'<span class="label label-danger">Inativo</span>')?></td>
 									<td class="text-right">
@@ -176,12 +173,9 @@
 							</tr>
 							</thead>
 							<tbody>
-							<?php $order = 0;
-							foreach ($campaigns as $cp):
-								$order++;
-								?>
+							<?php foreach ($campaigns as $cp):	?>
 								<tr>
-									<td><?= $order?></td>
+									<td><?= $cp->id_campaign?></td>
 									<td><?= $cp->costumer_name?></td>
 									<td><?= $cp->type?></td>
 									<td><?= $cp->model?></td>
@@ -234,7 +228,7 @@
 						</table>
 					</div>
 					<div class="box-footer text-right">
-						<a href="" class="label label-primary  small-box-footer">Mais informações <i class="fa fa-info-circle"></i></a>
+						<a href="<?= base_url('admin/reports_admin/estimated_impact')?>" class="label label-primary  small-box-footer">Mais informações <i class="fa fa-info-circle"></i></a>
 					</div>
 				</div>
 			</div>
@@ -268,7 +262,7 @@
 						</table>
 					</div>
 					<div class="box-footer text-right">
-						<a href="" class="label label-primary  small-box-footer">Mais informações <i class="fa fa-info-circle"></i></a>
+						<a href="<?= base_url('admin/reports_admin/airing_hours')?>" class="label label-primary  small-box-footer">Mais informações <i class="fa fa-info-circle"></i></a>
 					</div>
 				</div>
 			</div>
