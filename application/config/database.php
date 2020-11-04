@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	   => '',
-	'hostname' => 'sql161.main-hosting.eu', //sql358.main-hosting.eu, sql139.main-hosting.eu
+	'hostname' => 'localhost', //sql358.main-hosting.eu, sql139.main-hosting.eu
 	'username' => 'u847880309_yuri',
 	'password' => 'Yuri@0137',
 	'database' => 'u847880309_adoohbank',

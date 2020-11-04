@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<!-- ICO-->
-	<link rel="shortcut icon" type="image/x-icon" href="https://ad-ooh.com/ad-ooh_logo_pin_20200522.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url('public/web/imgs/icons/ad-ooh_logo_pin_20200522.ico') ?>">
 	<!-- Master -->
 	<link rel="stylesheet" href="<?= base_url('public/admin/css/master.css') ?>">
 	<!-- Material Design Bootstrap -->
@@ -33,10 +33,10 @@
 <div class="wrapper">
 	<header class="main-header">
 		<!-- Logo -->
-		<a href="<?= base_url('admin')?>" class="logo">
+		<a href="<?= base_url('admin')?>" class="logo" style="background-color: rgb(204,13,74,1);">
 			<img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_white.png')?>" alt="ad-ooh logo branco">
 		</a>
-		<nav class="navbar navbar-static-top">
+		<nav class="navbar navbar-static-top" style="background-color: rgb(255,0,88,1)"> <!--style="background-color: rgb(255,0,88,0.75)"-->
 			<!-- Sidebar toggle button-->
 			<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
 				<span class="sr-only">Toggle navigation</span>
@@ -48,10 +48,10 @@
 							<span class="hidden-xs "><i class="fa fa-lock" aria-hidden="true"></i> Logout</span>
 						</a>
 						<ul class="dropdown-menu">
-							<li class="user-header">
+							<li class="user-header" style="background-color: rgb(255,0,88,1)">
 								<h3 class="user_config"><?= $session->nome?></h3>
 							</li>
-							<li class="user-header"><img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_white.png')?>" alt="ad-ooh logo branco"></li>
+							<li class="user-header" style="background-color: rgb(255,0,88,1)"><img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_white.png')?>" alt="ad-ooh logo branco"></li>
 							<!-- Menu Footer-->
 							<li class="user-footer">
 								<div style="padding-left: 95px">
