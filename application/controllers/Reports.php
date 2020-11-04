@@ -13,11 +13,7 @@ class Reports extends CI_Controller{
 	}*/
 
 	public function index(){
-
-		$this->load->view('web/reports/templates/header');
-		$this->load->view('web/reports/templates/navigation');
-		$this->load->view('web/reports/mcdonalds/index');
-
+		$this->load->view('web/reports/outback/list');
 	}
 
 }

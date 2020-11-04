@@ -94,7 +94,7 @@
 				<div class="col-md-12">
 					<h2 class="title">Faça parte desta novidade!</h2>
 					<!-- <h5 class="description">Somos o mais novo meio de comunicação no Digital Out of Home. A única mídia em movimento, com conteúdo geolocalizado em tempo real. Temos o conceito de transmitir informação e gerar oportunidades de negócios. Com uma estrutura 100% digital, já atuamos em todas capitais do país.</h5> -->
-					<a href="https://www.cadastroad-ooh.com/">
+					<a href="<?= base_url('motoristas/cadastro')?>">
 						<button class="btn btn-primary btn-raised">
 							Cadastre-se já!
 						</button></a>
