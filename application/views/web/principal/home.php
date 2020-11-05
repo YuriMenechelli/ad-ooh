@@ -78,7 +78,7 @@
 					<div class="col-md-12">
 						<h2 class="title">Seja um motorista parceiro</h2>
 						<h5 class="description">Saiba como ganhar dinheiro junto com a ad-ooh.</h5>
-						<a href="<?= base_url('motoristas')?>"><button class="btn btn-primary btn-raised">Cadastre-se</button></a>
+						<a href="<?= base_url('cadastro')?>"><button class="btn btn-primary btn-raised">Cadastre-se</button></a>
 					</div>
 				</div>
 			</div>
@@ -93,7 +93,8 @@
 					<a href="mailto: cadastro@ad-ooh.com">
 						<button class="btn btn-primary btn-raised">
 							Escreva uma mensagem
-						</button></a>
+						</button>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -58,3 +58,8 @@ $route['admin'] = 'admin/home_admin';
 $route['admin/(:any)'] = 'admin/$1';
 $route['admin/(:any)/(:any)'] = 'admin/$1/$2';
 $route['admin/(:any)/(:any)/(:any)'] = 'admin/$1/$2/$3';
+
+
+
+$route['motoristas/(:any)'] = 'motoristas/index/$1';
+$route['cadastro'] = 'motoristas/cadastro';
