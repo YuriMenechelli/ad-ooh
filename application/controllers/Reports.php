@@ -10,7 +10,7 @@ class Reports extends CI_Controller{
 	}
 	public function video_check(){
 		$data['title']= 'Ad-ooh video check';
-		$data['view'] = 'public/web/videos/outback_202010.mp4';
+		$data['view'] = 'web/reports/outback/videos/outback_202010.mp4';
 		$this->load->view('web/template/index',$data);
 	}
 }
