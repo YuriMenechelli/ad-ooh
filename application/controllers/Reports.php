@@ -8,5 +8,9 @@ class Reports extends CI_Controller{
 		$data['view'] = 'web/reports/outback/list';
 		$this->load->view('web/template/index',$data);
 	}
-
+	public function video_check(){
+		$data['title']= 'Ad-ooh video check';
+		$data['view'] = 'public/web/videos/outback_202010.mp4';
+		$this->load->view('web/template/index',$data);
+	}
 }

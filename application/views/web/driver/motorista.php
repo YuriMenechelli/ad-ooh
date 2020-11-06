@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-8 ml-auto mr-auto">
 				<div class="brand">
-					<img src="assets\images\ad-ooh_logo_white.png" alt="">
+					<img src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_white.png') ?>" alt="">
 					<h3>Mídia, movimento e inovação.</h3>
 				</div>
 			</div>

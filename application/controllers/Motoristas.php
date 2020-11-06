@@ -11,7 +11,7 @@ class Motoristas extends CI_Controller{
 
 	public function cadastro(){
 
-		$data['title']	= 'Motoristas - Cadastro';
+		$data['title']	= 'Seja um parceiro';
 		$data['view']	= 'web/driver/cadastro';
 		$this->load->view('web/template/index',$data);
 	}

@@ -34,5 +34,4 @@ jQuery(document).ready(function($) {
 	// 	$('.user-menu').parent().toggleClass('open');
 	// });
 
-
 });

@@ -63,3 +63,7 @@ $route['admin/(:any)/(:any)/(:any)'] = 'admin/$1/$2/$3';
 
 $route['motoristas/(:any)'] = 'motoristas/index/$1';
 $route['cadastro'] = 'motoristas/cadastro';
+
+
+$route['reports/(:any)'] = 'reports/index/$1';
+$route['video_check'] = 'reports/video_check';
