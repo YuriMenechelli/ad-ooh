@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="https://ad-ooh.com/ad-ooh_logo_pin_20200522.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url('public/web/imgs/icons/ad-ooh_logo_pin_20200522.ico') ?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="description">
 	<meta name="viewport" content="width=device-width, initial-scale=1">

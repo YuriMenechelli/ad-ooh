@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="https://ad-ooh.com/ad-ooh_logo_pin_20200522.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url('public/web/imgs/icons/ad-ooh_logo_pin_20200522.ico') ?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="description">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,7 @@
 		<div class="form-box">
 			<div class="form-shadow">
 				<div class="form-header">
-					<h3 class="text-center">Administração Ad-ooh</h3>
+					<h3 class="text-center">Ad-ooh - Motoristas</h3>
 				</div>
 				<form name="meu_form" method="POST" enctype="multipart/form-data" action="">
 					<div class="form-content">
@@ -53,7 +53,7 @@
 							<div class="col-md-12">
 								<label for="nome">Senha:</label>
 								<input type="password" class="form-control" id="pass" required="required" placeholder="Digite sua senha" name="pass" />
-								<!--<small class="d-flex justify-content-end form-link"> <a href="/enviaremail.html">Esqueceu sua senha?</a></small>-->
+								<small class="d-flex justify-content-end form-link"> <a href="/enviaremail.html">Esqueceu sua senha?</a></small>
 							</div>
 						</div>
 

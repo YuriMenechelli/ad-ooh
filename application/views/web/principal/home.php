@@ -1,5 +1,5 @@
 <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url(<?= base_url('public/web/imgs/logos/herobg.gif')?>);">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-8 ml-auto mr-auto">
 				<div class="brand">
@@ -78,7 +78,7 @@
 					<div class="col-md-12">
 						<h2 class="title">Seja um motorista parceiro</h2>
 						<h5 class="description">Saiba como ganhar dinheiro junto com a ad-ooh.</h5>
-						<a href="<?= base_url('cadastro')?>"><button class="btn btn-primary btn-raised">Cadastre-se</button></a>
+						<a href="https://www.cadastroad-ooh.com/<?/*= base_url('cadastro')*/?>"><button class="btn btn-primary btn-raised">Cadastre-se</button></a>
 					</div>
 				</div>
 			</div>
@@ -90,7 +90,7 @@
 				<div class="col-md-12">
 					<h2 class="title">Contato</h2>
 					<h5 class="description">Whatsapp: +55 11 992337015</h5>
-					<a href="mailto: cadastro@ad-ooh.com">
+					<a href="<?= base_url('contact')?>">
 						<button class="btn btn-primary btn-raised">
 							Escreva uma mensagem
 						</button>

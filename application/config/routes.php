@@ -65,5 +65,6 @@ $route['motoristas/(:any)'] = 'motoristas/index/$1';
 $route['cadastro'] = 'motoristas/cadastro';
 
 
-$route['reports/(:any)'] = 'reports/index/$1';
-$route['video_check'] = 'reports/video_check';
+$route['outback'] = 'reports/outback';
+$route['freeco'] = 'reports/freeco';
+$route['mcdonalds'] = 'reports/mcdonalds';

@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -8,7 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <html class="no-js" lang="pt-br">
 <!--<![endif]-->
-
 <head>
 	<title><?=$title?></title>
 	<meta name="description" content="ad-ooh">
@@ -19,18 +17,15 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url('public/web/imgs/icons/ad-ooh_logo_pin_20200522.ico') ?>">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet" />
-
-	<link rel="stylesheet" href="<?= base_url('public/web/dist/font-awesome/css/font-awesome.min.css')?>">
-	<link rel="stylesheet" href="<?= base_url('public/web/dist/themify-icons/css/themify-icons.css')?>">
-	<link rel="stylesheet" href="<?= base_url('public/web/dist/flag-icon-css/css/flag-icon.min.css')?>">
-	<link rel="stylesheet" href="<?= base_url('public/web/dist/selectFX/css/cs-skin-elastic.css')?>">
-	<link rel="stylesheet" href="<?= base_url('public/web/dist/jqvmap/dist/jqvmap.min.css')?>">
 
 	<!-- Estilo -->
 	<link rel="stylesheet" href="<?= base_url('public/web/css/master.css')?>">
 	<link rel="stylesheet" href="<?= base_url('public/web/css/institucional.css')?>">
 	<link rel="stylesheet" href="<?= base_url('public/web/css/color.css')?>">
+
+	<!-- Estilo Reports-->
+	<link href="<?= base_url('public/web/reports/css/color.css')?>" rel="stylesheet" type="text/css">
+	<link href="<?= base_url('public/web/reports/css/master.css')?>" rel="stylesheet" type="text/css">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet" type="text/css">
@@ -56,12 +51,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 	<script>
 		!function(f,b,e,v,n,t,s)
 		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 			n.queue=[];t=b.createElement(e);t.async=!0;
 			t.src=v;s=b.getElementsByTagName(e)[0];
 			s.parentNode.insertBefore(t,s)}(window, document,'script',
-			'https://connect.facebook.net/en_US/fbevents.js');
+				'https://connect.facebook.net/en_US/fbevents.js');
 		fbq('init', '2364952650463706');
 		fbq('track', 'PageView');
 	</script>
@@ -71,24 +66,39 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <body class="index-page sidebar-collapse">
 <!--	Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-dash_partner">
-	<div class="container">
+	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<a class="navbar-brand" href="<?= base_url()?>"><img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_white.png')?>" alt="ad-ooh logo branco"></a>
 		<!-- Hamburguer Btn-->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<button class="navbar-toggler"
+				type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="<?= base_url()?>">Home <span class="sr-only">(current)</span></a>
-				<a class="nav-item nav-link" href="<?= base_url('motoristas')?>">Seja um Parceiro</a>
-				<a class="nav-item nav-link" href="#contact">Contato</a>
-				<a class="nav-item nav-link" href="<?= base_url('admin/login_admin')?>">Login</a>
+			<div class="navbar-collapse navbar-nav ml-auto justify-content-end" id="navbarNav">
+				<a class="nav-item nav-link active mr-md-2" href="<?= base_url()?>">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link mr-md-2" href="https://www.cadastroad-ooh.com/<?/*= base_url('motoristas')*/?>">Seja um Parceiro</a>
+				<a  class="nav-item nav-link mr-md-2" href="<?= base_url('contact')?>">
+					Contato
+				</a>
+				<li class="navbar-nav dropdown">
+					<a class="nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Login
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<?= base_url('driver_login')?>">Motoristas</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="<?= base_url('admin/login_admin')?>">Administração</a>
+					</div>
+				</li>
 			</div>
-		</div> <!-- /.navbar-collapse -->
+		 <!-- /.navbar-collapse -->
 	</div><!-- /.container-->
 </nav>
 <!-- Header -->
-<div class="content-wrapper">
+<div>
 	<?php
 	if (isset($view)){
 		$this->load->view($view);
@@ -97,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 </div>
 <!--/Header-->
 <footer class="footer footer-default">
-	<div class="container">
+	<div class="container-fluid">
 		<nav class="float-left">
 			<ul>
 				<li>
@@ -116,52 +126,30 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 		</div>
 	</div>
 </footer>
-
 <!-- Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
-<!-- scripts -->
-<script src="<?= base_url('public/web/dist/jquery/dist/jquery.min.js')?>"></script>
-<script src="<?= base_url('public/web/dist/popper.js/dist/umd/popper.min.js')?>"></script>
-<script src="<?= base_url('public/web/dist/bootstrap/dist/js/bootstrap.min.js')?>"></script>
-<script src="<?= base_url('public/web/js/main.js')?>"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet" />
 
-<script src="<?= base_url('public/web/dist/chart.js/dist/Chart.bundle.min.js')?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+<!-- scripts -->
+<script src="<?= base_url('public/web/js/jquery.min.js')?>"></script>
+<script src="<?= base_url('public/web/js/bootstrap.min.js')?>"></script>
+<script src="<?= base_url('public/web/js/jquery.mask.min.js')?>"></script>
+<script src="<?= base_url('public/web/js/web_main.js')?>"></script>
+
 <script src="<?= base_url('public/web/js/dashboard.js')?>"></script>
 <script src="<?= base_url('public/web/js/widgets.js')?>"></script>
-<script src="<?= base_url('public/web/dist/jqvmap/dist/jquery.vmap.min.js')?>"></script>
-<script src="<?= base_url('public/web/dist/jqvmap/examples/js/jquery.vmap.sampledata.js')?>"></script>
-<script src="<?= base_url('public/web/dist/jqvmap/dist/maps/jquery.vmap.world.js')?>"></script>
-<script>
-	(function($) {
-		"use strict";
 
-		jQuery('#vmap').vectorMap({
-			map: 'world_en',
-			backgroundColor: null,
-			color: '#ffffff',
-			hoverOpacity: 0.7,
-			selectedColor: '#1de9b6',
-			enableZoom: true,
-			showTooltip: true,
-			values: sample_data,
-			scaleColors: ['#1de9b6', '#03a9f5'],
-			normalizeFunction: 'polynomial'
-		});
-	})(jQuery);
-</script>
 
-<!-- Gmaps -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoLD_9T-esRyVIc0jkKJ5RQmRO2K-f6WY"></script>
-<script src="<?= base_url('public/web/dist/gmaps/gmaps.min.js')?>"></script>
-<script src="<?= base_url('public/web/js/init-scripts/gmap/gmap.init.js')?>"></script>
-
-<!--  Chart js -->
-<script src="<?= base_url('public/web/dist/chart.js/dist/Chart.bundle.min.js')?>"></script>
-<script src="<?= base_url('public/web/js/init-scripts/chart-js/chartjs-init.js')?>"></script>
+<!--Freeco Script-->
+<script src="<?= base_url('public/web/reports/js/freeco.js')?>"></script>
+<!--OutBack Script-->
+<script src="<?= base_url('public/web/reports/js/outback.js')?>"></script>
+<!--Mc Donald's Script-->
+<script src="<?= base_url('public/web/reports/js/mcdonalds.js')?>"></script>
 </body>
 </html>

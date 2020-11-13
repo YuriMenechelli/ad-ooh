@@ -93,6 +93,8 @@
 						<li><a href="<?= base_url('admin/reports_admin/airing_hours')?>"><i class="fa fa-circle text-aqua"></i> Tempo de Veiculação</a></li>
 					</ul>
 				</li>
+				<li class="header">SITE AD-OOH</li>
+				<li><a href="<?= base_url('admin/contact_admin')?>"><i class="fa fa-circle text-purple"></i> Contatos recentes</a></li>
 				<li class="header">SISTEMA</li>
 				<li class="treeview">
 					<a href="#">
@@ -144,7 +146,7 @@
 	<!-- AdminLTE for demo purposes -->
 	<script src="<?= base_url('public/admin/js/demo.js') ?>"></script>
 	<!-- JS Principal do site -->
-	<script src="<?= base_url('public/admin/js/main.js') ?>"></script>
+	<script src="<?= base_url('public/admin/js/admin_main.js') ?>"></script>
 	<!--JQuery Mask-->
 	<script src="<?= base_url('public/admin/dist/jquery-mask/js/jquery.mask.min.js') ?>"></script>
 	<!--JQuery UploadFile-->
