@@ -20,8 +20,8 @@
 
 	<!-- Estilo -->
 	<link rel="stylesheet" href="<?= base_url('public/web/css/master.css')?>">
-	<link rel="stylesheet" href="<?= base_url('public/web/css/institucional.css')?>">
 	<link rel="stylesheet" href="<?= base_url('public/web/css/color.css')?>">
+	<!--<link rel="stylesheet" href="<?/*= base_url('public/web/css/institucional.css')*/?>">-->
 
 	<!-- Estilo Reports-->
 	<link href="<?= base_url('public/web/reports/css/color.css')?>" rel="stylesheet" type="text/css">
@@ -29,13 +29,15 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet" type="text/css">
-
 	<!-- FontAwesome -->
 	<script src="https://kit.fontawesome.com/b38b06be8b.js" crossorigin="anonymous"></script>
 
 	<!--     Fonts and icons     -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+	<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145578930-4"></script>
@@ -64,40 +66,6 @@
 	<!-- End Facebook Pixel Code -->
 </head>
 <body class="index-page sidebar-collapse">
-<!--	Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-dash_partner">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<a class="navbar-brand" href="<?= base_url()?>"><img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_white.png')?>" alt="ad-ooh logo branco"></a>
-		<!-- Hamburguer Btn-->
-		<button class="navbar-toggler"
-				type="button" data-toggle="collapse"
-				data-target="#navbarNav" aria-controls="navbarNav"
-				aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="navbar-collapse navbar-nav ml-auto justify-content-end" id="navbarNav">
-				<a class="nav-item nav-link active mr-md-2" href="<?= base_url()?>">Home <span class="sr-only">(current)</span></a>
-				<a class="nav-item nav-link mr-md-2" href="https://www.cadastroad-ooh.com/<?/*= base_url('motoristas')*/?>">Seja um Parceiro</a>
-				<a  class="nav-item nav-link mr-md-2" href="<?= base_url('contact')?>">
-					Contato
-				</a>
-				<li class="navbar-nav dropdown">
-					<a class="nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Login
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="<?= base_url('driver_login')?>">Motoristas</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="<?= base_url('admin/login_admin')?>">Administração</a>
-					</div>
-				</li>
-			</div>
-		 <!-- /.navbar-collapse -->
-	</div><!-- /.container-->
-</nav>
-<!-- Header -->
 <div>
 	<?php
 	if (isset($view)){
@@ -105,27 +73,6 @@
 	}
 	?>
 </div>
-<!--/Header-->
-<footer class="footer footer-default">
-	<div class="container-fluid">
-		<nav class="float-left">
-			<ul>
-				<li>
-					<a href="<?= base_url()?>">
-						<img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_color.png')?>" alt="">
-					</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="copyright float-right">
-			&copy;
-			ad-ooh
-			<script>
-				document.write(new Date().getFullYear())
-			</script>
-		</div>
-	</div>
-</footer>
 <!-- Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -137,14 +84,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
 <!-- scripts -->
 <script src="<?= base_url('public/web/js/jquery.min.js')?>"></script>
-<script src="<?= base_url('public/web/js/bootstrap.min.js')?>"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="<?= base_url('public/admin/dist/bootstrap/js/bootstrap.min.js') ?>"></script>
 <script src="<?= base_url('public/web/js/jquery.mask.min.js')?>"></script>
-<script src="<?= base_url('public/web/js/web_main.js')?>"></script>
-
-<script src="<?= base_url('public/web/js/dashboard.js')?>"></script>
-<script src="<?= base_url('public/web/js/widgets.js')?>"></script>
-
-
+<script src="<?= base_url('public/web/js/main.js')?>"></script>
+<!-- SlimScroll -->
+<script src="<?= base_url('public/admin/dist/jquery-slimscroll/jquery.slimscroll.min.js') ?>"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
 <!--Freeco Script-->
 <script src="<?= base_url('public/web/reports/js/freeco.js')?>"></script>
 <!--OutBack Script-->

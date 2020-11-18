@@ -1,3 +1,37 @@
+<!--	Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-dash_partner">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<a class="navbar-brand" href="<?= base_url()?>"><img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_white.png')?>" alt="ad-ooh logo branco"></a>
+		<!-- Hamburguer Btn-->
+		<button class="navbar-toggler"
+				type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="navbar-collapse navbar-nav ml-auto justify-content-end" id="navbarNav">
+			<li class="navbar-nav dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Login
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="<?= base_url('driver_login')?>">Motoristas</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="<?= base_url('admin/login_admin')?>">Administração</a>
+				</div>
+			</li>
+			<a class="nav-item nav-link active" href="<?= base_url()?>">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="<?= base_url('motoristas')?>">Seja um Parceiro</a>
+			<a  class="nav-item nav-link" href="<?= base_url('contact')?>">
+				Contato
+			</a>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div><!-- /.container-->
+</nav>
+<!-- Header -->
 <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url(<?= base_url('public/web/imgs/logos/herobg.gif')?>);">
 	<div class="container-fluid">
 		<div class="row">
@@ -78,7 +112,7 @@
 					<div class="col-md-12">
 						<h2 class="title">Seja um motorista parceiro</h2>
 						<h5 class="description">Saiba como ganhar dinheiro junto com a ad-ooh.</h5>
-						<a href="https://www.cadastroad-ooh.com/<?/*= base_url('cadastro')*/?>"><button class="btn btn-primary btn-raised">Cadastre-se</button></a>
+						<a href="https://www.cadastroad-ooh.com/<?/*= base_url('motoristas')*/?>"><button class="btn btn-primary btn-raised">Cadastre-se</button></a>
 					</div>
 				</div>
 			</div>
@@ -100,3 +134,24 @@
 		</div>
 	</div>
 </div>
+<!--/Header-->
+<footer class="footer footer-default">
+	<div class="container-fluid">
+		<nav class="float-left">
+			<ul>
+				<li>
+					<a href="<?= base_url()?>">
+						<img style="height: 30px;" src="<?= base_url('public/web/imgs/logos/ad-ooh_logo_color.png')?>" alt="">
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="copyright float-right">
+			&copy;
+			ad-ooh
+			<script>
+				document.write(new Date().getFullYear())
+			</script>
+		</div>
+	</div>
+</footer>

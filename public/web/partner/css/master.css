@@ -1,0 +1,135 @@
+html,body {
+  height: 100%;
+  margin: 0;
+}
+main {
+ height: 45%;
+}
+section{
+    height: 10%;
+}
+footer {
+    height: 5%
+}
+.logo_footer {
+    height: 20%;
+}
+.textMainColor {
+  color: var(--mainColor);
+}
+.videoBG {
+  position: fixed;
+   top: 0;
+   left: 0;
+   min-width: 100%;
+   min-height: 100%;
+   z-index: -1;
+}
+/* Texts */
+.heroText {
+  font-family: "Comfortaa ", sans-serif;
+  color: var(--whiteColor);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.call {
+    text-align: center;
+    border: 2px solid var(--mainColor);
+    border-radius: 1rem;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1.2em;
+    transition: 0.5s;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+}
+.call:hover {
+    background-color: var(--mainColor);
+    transition: 0.5s;
+    color: rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.w-30 {
+  width: 30%!important;
+}
+.bg-dark {
+  background-color: var(--secondColor)!important;
+}
+.bg-danger {
+  background-color: var(--mainColor)!important;
+}
+.bg-cadastro {
+    background-color: var(--lightgray);
+}
+/* Ad-spec */
+.spec-box {
+    background-color: var(--whiteColor);
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+}
+.spec-box , ul{
+    padding-top: 1rem;
+    list-style: none;
+}
+.modal-motorista {
+    max-width: 1000px;
+}
+.form-padding {
+    padding: 5rem 0;
+
+}
+.form-box {
+    padding: 2rem 0 0 0;
+}
+.spacer {
+  height: 100px;
+}
+.form-header {
+    color: var(--whiteColor);
+    padding: 1.5rem 2rem 0.5rem 2rem;
+    border-radius: 5px 5px 0 0;
+    /* border-top: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray); */
+    background-color: var(--mainColor);
+}
+.form-content {
+    padding: 2rem;
+    /* border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray); */
+    background-color: var(--white);
+}
+.form-footer {
+    padding: 2rem;
+    border-radius: 0 0 5px 5px ;
+    /* border-top: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray); */
+    background-color: var(--secondColor);
+}
+.btn-send {
+    color: var(--whiteColor);
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+    border-width: 5px;
+    border-radius: 10px;
+}
+.btn-send:hover {
+    color: var(--whiteColor);
+    background-color: var(--mainColor);
+    border-color: rgba(0,0,0,0.2);
+    border-width: 5px;
+}
+
+.navbar-dash_partner {
+  border-bottom: 1px solid var(--mainColor) ;
+}
+.footer-dash_partner {
+  border-top: 1px solid var(--mainColor) ;
+}

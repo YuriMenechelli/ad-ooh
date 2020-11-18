@@ -27,11 +27,17 @@ jQuery(document).ready(function($) {
 		$('.search-trigger').parent('.header-left').removeClass('open');
 	});
 
-	// $('.user-area> a').on('click', function(event) {
-	// 	event.preventDefault();
-	// 	event.stopPropagation();
-	// 	$('.user-menu').parent().removeClass('open');
-	// 	$('.user-menu').parent().toggleClass('open');
-	// });
+	document.querySelector("#control-sidebar-theme-demo-options-tab > div > ul");
+
+	var SPMaskBehavior = function (val) {
+			return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+		},
+		spOptions = {
+			onKeyPress: function(val, e, field, options) {
+				field.mask(SPMaskBehavior.apply({}, arguments), options);
+			}
+		};
+
+	$('.input_telefone').mask(SPMaskBehavior, spOptions);
 
 });

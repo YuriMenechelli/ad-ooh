@@ -53,18 +53,21 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
-$route['admin'] = 'admin/home_admin';
-$route['admin/(:any)'] = 'admin/$1';
-$route['admin/(:any)/(:any)'] = 'admin/$1/$2';
-$route['admin/(:any)/(:any)/(:any)'] = 'admin/$1/$2/$3';
-
-
-
-$route['motoristas/(:any)'] = 'motoristas/index/$1';
-$route['cadastro'] = 'motoristas/cadastro';
+//Administração
+$route['admin'] 						= 'admin/home_admin';
+$route['admin/(:any)'] 					= 'admin/$1';
+$route['admin/(:any)/(:any)'] 			= 'admin/$1/$2';
+$route['admin/(:any)/(:any)/(:any)'] 	= 'admin/$1/$2/$3';
 
 
-$route['outback'] = 'reports/outback';
-$route['freeco'] = 'reports/freeco';
+//Web
+$route['cadastro/passo_1'] 				= 'motoristas/cadastro_step1';
+$route['cadastro/passo_2'] 				= 'motoristas/cadastro_step2';
+$route['cadastro/passo_3'] 				= 'motoristas/cadastro_step3';
+$route['cadastro/passo_4'] 				= 'motoristas/cadastro_step4';
+$route['dashboard_partner'] 	= 'partner/home_partner';
+
+//Dashboards Costumers
+$route['outback'] 	= 'reports/outback';
+$route['freeco'] 	= 'reports/freeco';
 $route['mcdonalds'] = 'reports/mcdonalds';
